@@ -44,7 +44,7 @@ class ScheduledEc2Stack(Stack):
             self, 'StartStopEc2',
             runtime=lambda_.Runtime.PYTHON_3_9,
             handler="lambda_function.lambda_handler",
-            code=lambda_.AssetCode.from_asset('lambda'),
+            code=lambda_.AssetCode.from_asset('../lambda'),
             role=role_lambda
         )
 
